@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+<<<<<<< HEAD
     # "shortener",
     "shortener.apps.ShortenerConfig",
+=======
+    "shortener.apps.ShortenerConfig",
+    # "shortener",
+>>>>>>> 03-urls-views-models
 ]
 
 MIDDLEWARE = [
