@@ -1,4 +1,5 @@
 from django.contrib.auth.models import AbstractUser
+# from django.contrib.auth.models import User as U
 from django.db import models
 
 
@@ -10,5 +11,10 @@ class PayPlan(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
-# class Users(AbstractUser):
-#     pay_plan = models.ForeignKey(PayPlan, on_delete=models.DO_NOTHING)
+class Users(AbstractUser):
+    pay_plan = models.ForeignKey(PayPlan, on_delete=models.DO_NOTHING)
+
+
+class UserDetail(models.Model):
+    user = models.OneToOneField(Users, on_delete=models.CASCADE)
+    pay_plan = models.ForeignKey(PayPlan, on_delete=models.DO_NOTHING)
