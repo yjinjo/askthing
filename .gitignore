@@ -124,5 +124,7 @@ fabric.properties
 
 *.pyc
 venv/
+.env
+db.sqlite3
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,pycharm+all
